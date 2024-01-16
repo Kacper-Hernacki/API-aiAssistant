@@ -17,6 +17,15 @@ const pool = new Pool({
   port: process.env.DB_PORT,
 });
 
+pool.connect((err, client, release) => {
+  if (err) {
+    console.error('Error connecting to the database:', err);
+  } else {
+    console.log('Connected to the database');
+    release();
+  }
+});
+
 app.get('/', async (req, res) => {
   try {
     const { rows } = await pool.query('SELECT NOW()');
