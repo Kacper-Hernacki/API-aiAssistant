@@ -34,6 +34,27 @@ pool.connect((err, client, release) => {
   }
 });
 
+app.get('/xd', async (req, res) => {
+  try {
+    const { rows } = await pool.query('SELECT NOW()');
+    res.send(`xd: ${rows[0].now}`);
+  } catch (error) {
+    console.error(error);
+    res.send('Error while connecting to the database');
+  }
+});
+
+app.get('/lol', async (req, res) => {
+  try {
+
+    res.send(`xdxdxd lololo`);
+  } catch (error) {
+    console.error(error);
+    res.send('Error while connecting to the database');
+  }
+});
+
+
 app.get('/', async (req, res) => {
   try {
     const { rows } = await pool.query('SELECT NOW()');
@@ -43,6 +64,7 @@ app.get('/', async (req, res) => {
     res.send('Error while connecting to the database');
   }
 });
+
 
 // Endpoint to insert a test message into 'message_history'
 app.post('/test-message', async (req, res) => {
