@@ -37,7 +37,7 @@ pool.connect((err, client, release) => {
 app.get('/', async (req, res) => {
   try {
     const { rows } = await pool.query('SELECT NOW()');
-    res.send(`Hello World! Current time: ${rows[0].now}`);
+    res.send(`👋 Hello World! Current time: ${rows[0].now}`);
   } catch (error) {
     console.error(error);
     res.send('Error while connecting to the database');
