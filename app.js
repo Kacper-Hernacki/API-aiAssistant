@@ -5,8 +5,16 @@ const port = 3000;
 const bodyParser = require('body-parser');
 const { v4: uuidv4 } = require('uuid');
 
+require('dotenv').config();
+
 // Use body-parser middleware to parse JSON bodies
 app.use(bodyParser.json());
+
+try {
+  require('dotenv').config();
+} catch (error) {
+  console.error('Error loading .env file:', error.message);
+}
 
 // Configure the database connection.
 const pool = new Pool({
