@@ -13,6 +13,7 @@ const skillRoutes_1 = __importDefault(require("./routes/skillRoutes"));
 const apiKeyAuth_1 = __importDefault(require("./middleware/apiKeyAuth"));
 const filesRoutes_1 = __importDefault(require("./routes/filesRoutes"));
 const tasksRoutes_1 = __importDefault(require("./routes/tasksRoutes"));
+const notionRoutes_1 = __importDefault(require("./routes/notionRoutes"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const port = process.env.PORT || 3000;
@@ -24,6 +25,7 @@ app.use("/resources", resourceRoutes_1.default);
 app.use("/skills", skillRoutes_1.default);
 app.use("/files", filesRoutes_1.default);
 app.use("/tasks", tasksRoutes_1.default);
+app.use("/notion", notionRoutes_1.default);
 app.get("/", async (req, res) => {
     try {
         res.send(`👋 Hello World!`);

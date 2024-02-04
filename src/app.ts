@@ -8,6 +8,7 @@ import skillRoutes from "./routes/skillRoutes";
 import apiKeyAuth from "./middleware/apiKeyAuth";
 import filesRoutes from "./routes/filesRoutes";
 import tasksRoutes from "./routes/tasksRoutes";
+import notionRoutes from "./routes/notionRoutes";
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.use("/resources", resourceRoutes);
 app.use("/skills", skillRoutes);
 app.use("/files", filesRoutes);
 app.use("/tasks", tasksRoutes);
+app.use("/notion", notionRoutes);
 
 app.get("/", async (req: Request, res: Response) => {
   try {

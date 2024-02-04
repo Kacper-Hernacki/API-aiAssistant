@@ -4,8 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const tasksController_1 = require("../controllers/tasksController");
+const notionController_1 = require("../controllers/notionController");
 const router = express_1.default.Router();
-router.post('/', tasksController_1.tasksController.createTask);
+router.post('/', notionController_1.notionController.addCost);
 exports.default = router;
-//# sourceMappingURL=tasksRoutes.js.map
+//# sourceMappingURL=notionRoutes.js.map
