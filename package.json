@@ -2,22 +2,29 @@
   "name": "assistant-api",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/app.js",
+  "main": "dist/src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && nodemon dist/src/app.js",
+    "dev": "nodemon - exec 'ts-node' src/app.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@notionhq/client": "^2.2.14",
+    "@prisma/client": "5.4.2",
     "aws-sdk": "^2.1548.0",
     "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "langchain": "^0.1.11",
     "multer": "^1.4.5-lts.1",
     "pg": "^8.11.3",
+    "querystring": "^0.2.1",
+    "spotify-web-api-node": "^5.0.2",
+    "url": "^0.11.3",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
@@ -28,6 +35,8 @@
     "@types/node": "^20.11.15",
     "@types/pg": "^8.11.0",
     "@types/uuid": "^9.0.8",
+    "nodemon": "^3.0.3",
+    "prisma": "5.4.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }

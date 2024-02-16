@@ -1,10 +1,11 @@
-import messageRoutes from './messageRoutes';
-import resourceRoutes from './resourceRoutes';
-import skillRoutes from './skillRoutes';
+import messageRoutes from './message.routes';
+import resourceRoutes from './resource.routes';
+import skillRoutes from './skill.routes';
 import { Express } from 'express';
-import filesRoutes from "./filesRoutes";
-import tasksRoutes from "./tasksRoutes";
-import notionRoutes from "./notionRoutes";
+import filesRoutes from "./files.routes";
+import tasksRoutes from "./tasks.routes";
+import notionRoutes from "./notion.routes";
+import spotifyRoutes from "./spotify.routes";
 
 export default (app: Express): void => {
   app.use('/messages', messageRoutes);
@@ -13,4 +14,5 @@ export default (app: Express): void => {
   app.use('/files', filesRoutes);
   app.use('/tasks', tasksRoutes);
   app.use('/notion', notionRoutes);
+  app.use('/spotify', spotifyRoutes);
 };

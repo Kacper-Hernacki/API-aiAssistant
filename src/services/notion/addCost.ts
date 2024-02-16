@@ -29,7 +29,8 @@ export const addCost = async (costData: string) => {
   const humanTemplate = "{text}";
   const context = "Text provided in a message is extracted from a photo of receipt and is in Polish. There can be typography errors. Always return only an array, nothing more.";
   //creating prompt from schema
-  const chatPrompt = ChatPromptTemplate.fromMessages([
+  const chatPrompt =
+    ChatPromptTemplate.fromMessages([
     context,
     ["system", systemTemplate],
     ["human", humanTemplate],
