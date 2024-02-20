@@ -10,6 +10,7 @@ const files_routes_1 = __importDefault(require("./files.routes"));
 const tasks_routes_1 = __importDefault(require("./tasks.routes"));
 const notion_routes_1 = __importDefault(require("./notion.routes"));
 const spotify_routes_1 = __importDefault(require("./spotify.routes"));
+const notes_routes_1 = __importDefault(require("./notes.routes"));
 exports.default = (app) => {
     app.use('/messages', message_routes_1.default);
     app.use('/resources', resource_routes_1.default);
@@ -18,5 +19,6 @@ exports.default = (app) => {
     app.use('/tasks', tasks_routes_1.default);
     app.use('/notion', notion_routes_1.default);
     app.use('/spotify', spotify_routes_1.default);
+    app.use('/notes', notes_routes_1.default);
 };
 //# sourceMappingURL=index.js.map

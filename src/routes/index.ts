@@ -6,6 +6,7 @@ import filesRoutes from "./files.routes";
 import tasksRoutes from "./tasks.routes";
 import notionRoutes from "./notion.routes";
 import spotifyRoutes from "./spotify.routes";
+import notesRoutes from "./notes.routes";
 
 export default (app: Express): void => {
   app.use('/messages', messageRoutes);
@@ -15,4 +16,5 @@ export default (app: Express): void => {
   app.use('/tasks', tasksRoutes);
   app.use('/notion', notionRoutes);
   app.use('/spotify', spotifyRoutes);
+  app.use('/notes',notesRoutes)
 };
